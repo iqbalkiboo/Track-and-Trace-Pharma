@@ -1,0 +1,1 @@
+import"./modal-add-principal.vue_vue_type_script_setup_true_lang.ffdeb50f.js";import{_}from"./modal-add-principal.vue_vue_type_script_setup_true_lang.ffdeb50f.js";import"./index.21c0d750.js";import"./principal.7a723d63.js";import"./getCompanyId.7d0eb93b.js";import"./getHoldingId.48f570fc.js";export{_ as default};

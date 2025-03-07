@@ -1,0 +1,1 @@
+import"./modal-add-serialize.vue_vue_type_script_setup_true_lang.427f3a0a.js";import{_ as t}from"./modal-add-serialize.vue_vue_type_script_setup_true_lang.427f3a0a.js";import"./index.21c0d750.js";export{t as default};

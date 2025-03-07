@@ -1,0 +1,1 @@
+import"./modal-add-tipe-kendaraan.vue_vue_type_script_setup_true_lang.a6641fe4.js";import{_ as f}from"./modal-add-tipe-kendaraan.vue_vue_type_script_setup_true_lang.a6641fe4.js";import"./index.21c0d750.js";import"./master-kategori-kendaraan.1100df56.js";import"./getCompanyId.7d0eb93b.js";export{f as default};

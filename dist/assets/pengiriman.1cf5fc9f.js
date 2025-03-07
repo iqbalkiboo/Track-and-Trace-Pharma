@@ -1,0 +1,1 @@
+import{_ as c}from"./t-menu-pengiriman.be69a123.js";import{m as _,p as a,o as s,c as m,k as e,F as p,a4 as n}from"./index.21c0d750.js";import"./breakpoints.0cfc147a.js";const o={};function i(f,u){const t=c,r=a("router-view");return s(),m(p,null,[e(t),e(r)],64)}typeof n=="function"&&n(o);const k=_(o,[["render",i]]);export{k as default};

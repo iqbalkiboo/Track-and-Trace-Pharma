@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.required::after {
+    content: "*";
+    color: red;
+}
+
+/* HOVER TEXT */
+.text_hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.text_hover:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.text_link {
+    font-size: 0.8rem;
+    color: #0b8f9d;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@-webkit-keyframes swing {
+    15% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    50% {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+    }
+    65% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    80% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes swing {
+    15% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    50% {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+    }
+    65% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    80% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.card-tnt .card-box-tnt:hover {
+    background: #ddd !important;
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+.list-enter-active,
+.list-leave-active {
+    transition: all 0.5s ease;
+}
+.list-enter-from {
+    opacity: 0;
+    transform: translateX(30px);
+}
+.list-leave-to {
+    opacity: 0;
+}
+.lacak-card-tnt:hover {
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+.card-active {
+    display: flex;
+    padding: 22px 28px;
+    border-radius: 12px;
+}
+.card-active {
+    background: rgba(210, 229, 219, 0.5) !important;
+    box-shadow: 200px 1px 0px -160px rgba(33, 150, 83, 1) inset;
+    -webkit-box-shadow: 200px 1px 0px -160px rgba(33, 150, 83, 1) inset;
+    -moz-box-shadow: 200px 1px 0px -160px rgba(33, 150, 83, 1) inset;
+}
+.card-active:hover {
+    background: rgba(22, 107, 5, 0.2) !important;
+    box-shadow: 200px 1px 0px -160px rgba(33, 150, 83, 1) inset;
+    -webkit-box-shadow: 200px 1px 0px -160px rgba(33, 150, 83, 1) inset;
+    -moz-box-shadow: 200px 1px 0px -160px rgba(33, 150, 83, 1) inset;
+}
+.n-step-indicator {
+    width: 3px;
+}
+.n-step-indicator {
+    border: 1.5px solid #219653;
+}
+
+.n-step-indicator-slot__index {
+    display: none !important;
+}
+.date-lacak {
+    position: absolute;
+    top: 0px;
+    left: -80px;
+}
+.date-lacak p {
+    color: #828282;
+}
+.n-step-splitor {
+    color: rgba(194, 194, 194, 1);
+}
+
+img, video {
+  /*max-width: unset;*/
+  height: revert-layer;
+}
+
+.hover\:text-\[\#415167\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(65 81 103 / var(--tw-text-opacity))!important;
+}
+
+.n-table th {
+  text-align: unset;
+}
+
+.container {
+  box-sizing: border-box;
+}

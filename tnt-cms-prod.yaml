@@ -1,0 +1,93 @@
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $NAME_SERVICE
+  labels:
+    tags.datadoghq.com/env: production
+    tags.datadoghq.com/service: $NAME_SERVICE
+    tags.datadoghq.com/version: v20240709
+spec:
+  selector:
+    matchLabels:
+      app: $NAME_SERVICE
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: $NAME_SERVICE
+        tags.datadoghq.com/env: production
+        tags.datadoghq.com/service: $NAME_SERVICE
+        tags.datadoghq.com/version: v20240709
+        admission.datadoghq.com/enabled: "true"
+      annotations:
+        admission.datadoghq.com/js-lib.version: v5.17.0
+    spec:
+      containers:
+        - name: $NAME_SERVICE
+          image: $IMAGE
+          imagePullPolicy: "Always"
+          ports:
+          - containerPort: 80
+          env:
+            - name: DD_AGENT_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+            - name: DD_PROFILING_ENABLED
+              value: "true"
+            - name: DD_LOGS_INJECTION
+              value: "true"
+            - name: DD_TRACE_SAMPLE_RATE
+              value: "1"
+            - name: DD_IAST_ENABLED
+              value: "true" 
+            - name: DD_APPSEC_ENABLED
+              value: "true" 
+          envFrom:
+            - secretRef:
+                name: $NAME_SERVICE
+          resources:
+            limits:
+              cpu: 1500m
+            requests:
+              cpu: 500m
+
+--- 
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: $NAME_SERVICE
+  annotations:
+    networking.gke.io/load-balancer-type: "Internal"
+spec:
+  type: LoadBalancer
+  selector:
+    app: $NAME_SERVICE
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+---
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: $NAME_SERVICE
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: $NAME_SERVICE
+  minReplicas: 2
+  maxReplicas: 5  
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50

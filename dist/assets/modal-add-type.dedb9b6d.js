@@ -1,0 +1,1 @@
+import"./modal-add-type.vue_vue_type_script_setup_true_lang.f997e626.js";import{_ as f}from"./modal-add-type.vue_vue_type_script_setup_true_lang.f997e626.js";import"./index.21c0d750.js";import"./type.86a7443c.js";import"./getHoldingId.48f570fc.js";export{f as default};

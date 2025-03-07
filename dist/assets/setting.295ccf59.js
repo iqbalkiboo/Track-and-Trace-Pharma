@@ -1,0 +1,1 @@
+import{_ as r}from"./t-menu-setting.ed156119.js";import{m as s,p as _,o as a,c as m,k as e,F as p,a4 as o}from"./index.21c0d750.js";import"./breakpoints.0cfc147a.js";const t={};function i(f,u){const n=r,c=_("router-view");return a(),m(p,null,[e(n),e(c)],64)}typeof o=="function"&&o(t);const k=s(t,[["render",i]]);export{k as default};

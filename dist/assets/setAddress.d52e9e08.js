@@ -1,0 +1,1 @@
+const u=t=>{var i,n,c,e;if(t){const o=t.detail,r=(i=t.urban_village)==null?void 0:i.name,s=(n=t.sub_district)==null?void 0:n.name,a=(c=t.district)==null?void 0:c.name,l=(e=t.province)==null?void 0:e.name;return`${o}, ${r}, ${s}, ${a}, ${l}`}};export{u as s};

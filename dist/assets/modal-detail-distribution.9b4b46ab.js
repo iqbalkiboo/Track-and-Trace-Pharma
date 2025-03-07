@@ -1,0 +1,1 @@
+import"./modal-detail-distribution.vue_vue_type_script_setup_true_lang.8f610336.js";import{_ as i}from"./modal-detail-distribution.vue_vue_type_script_setup_true_lang.8f610336.js";import"./moment.62d3fb0a.js";import"./index.21c0d750.js";export{i as default};

@@ -1,0 +1,1 @@
+import{r as n,e as o}from"./index.21c0d750.js";const e=n();e.value=o.getAuth();function p(){var s,r,u,a;let t="";return e.value.xxtype==="5up3r4dm1n"?t=(s=e.value["xx-usertype-access"])==null?void 0:s.company_id:t=(a=(u=(r=e==null?void 0:e.value)==null?void 0:r.users)==null?void 0:u.user_type)==null?void 0:a.id,t}const m=p();export{m as g};

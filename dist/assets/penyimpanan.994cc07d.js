@@ -1,0 +1,1 @@
+import{_ as r}from"./t-menu-penyimpanan.38e45e22.js";import{m as a,p as _,o as s,c as p,k as n,F as m,a4 as e}from"./index.21c0d750.js";import"./breakpoints.0cfc147a.js";const o={};function i(f,u){const t=r,c=_("router-view");return s(),p(m,null,[n(t),n(c)],64)}typeof e=="function"&&e(o);const v=a(o,[["render",i]]);export{v as default};
